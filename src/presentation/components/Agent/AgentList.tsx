@@ -5,6 +5,7 @@ import { AgentStatus } from "../../../domain/AgentTypes";
 import { Edit } from "@mui/icons-material";
 import { useAgentContext } from "../../hooks/useAgentContext";
 import { useAppSelector } from "../../../infrastucture/store/hooks";
+import { IconButtonCustom } from "./CustomComponents";
 
 export const AgentList:FC<AgentListProps> = ({agents}) =>{
     const {  setSelectedAgent } = useAgentContext()
@@ -41,9 +42,9 @@ export const AgentList:FC<AgentListProps> = ({agents}) =>{
                             <TableCell>{agent.accuracy}</TableCell>
                             <TableCell>{agent.lastActive}</TableCell>
                             <TableCell align="right">
-                                <IconButton onClick={()=>setSelectedAgent(agent)}>
+                                <IconButtonCustom  onClick={()=>setSelectedAgent(agent)}>
                                     <Edit />
-                                </IconButton>
+                                </IconButtonCustom>
                             </TableCell>
                     </TableRow>
                 ))
