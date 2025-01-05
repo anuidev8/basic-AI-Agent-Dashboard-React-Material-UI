@@ -9,8 +9,6 @@ import { IconButtonCustom } from "./CustomComponents";
 
 export const AgentList:FC<AgentListProps> = ({agents}) =>{
     const {  setSelectedAgent } = useAgentContext()
-    const filters = useAppSelector(state => state.agents.filters)
-    
     
    return (
     <Paper sx={{ p:2 }}>
